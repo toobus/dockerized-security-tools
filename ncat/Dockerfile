@@ -1,8 +1,6 @@
 FROM ubuntu:18.04
 
-LABEL maintainer="rorym@mccune.org.uk"
-
-RUN apt update && apt install -y build-essential libssh-dev openssl wget
+RUN apt update && apt install -y build-essential libssh-dev openssl wget apt-utils kmod gcc libcap2-bin
 
 RUN wget https://nmap.org/dist/nmap-7.70.tar.bz2 && tar -xjvf nmap-7.70.tar.bz2
 
